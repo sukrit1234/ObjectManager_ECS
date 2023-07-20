@@ -155,3 +155,10 @@ to take advantage from ObjectManager to control Entity instance references.
     and then assign those chucks reference to Archetype and update entity action execute action for each chuck, It will reduce cache miss and a lot better performance.
   + Garbage collector should be use more complex approach. Right now just simple check all of object reference count each interval of time. I must improve by defered check, queue object and check some of object in list. Spread computation to several frames.
   + Maybe many more bugs that I not found it right now because limit time to test. But on real working must do test much much more.
+
+### Appendix More on ECS on this project.
+I search and read for concept of ECS because it's new for me and I found this approach https://www.david-colson.com/2020/02/09/making-a-simple-ecs.html
+it minimum enough to implement with short amount of time and use Archetype.
+ + [**Archetype**](https://github.com/sukrit1234/ObjectManager_ECS/blob/main/TestProject/Archetype.h) : Batch of entities to apply actions categorized by combination of component type.
+ + [ComponentArray](https://github.com/sukrit1234/ObjectManager_ECS/blob/main/TestProject/ComponentArray.h) : Object wrapper of contiguous memory structure to contain entity's component data.
+
