@@ -1,0 +1,8 @@
+﻿  Entity.cpp
+  EntityAction.cpp
+  EntityActionManager.cpp
+  ObjectManager.cpp
+  TestProject.cpp
+  Types.cpp
+  Generating Code...
+  TestProject.vcxproj -> D:\BohemiaTest\TestProject\Debug\TestProject.exe
