@@ -143,3 +143,15 @@ int main()
 	}
 }
 ```
+### Output
+![plot](https://github.com/sukrit1234/ObjectManager_ECS/blob/main/Output_ECS.png)
+
+## Limitations or encountered problems
+We have limitation and many space to improve from this.
+  + Should update Entity class inherit from Object class and create EntityManager inherit from GenericObjectManager<Entity>
+to take advantage from ObjectManager to control Entity instance references.
+  + Should add more utitlity to access data pointer reference to modify entity's component data outside EntityAction
+  + Right now Archetype directly contain array of entity's component data. For very optimized performance. I should implement Archetype Chuck to contain entity's component data
+    and then assign those chucks reference to Archetype and update entity action execute action for each chuck, It will reduce cache miss and a lot better performance.
+  + Garbage collector should be use more complex approach. Right now just simple check all of object reference count each interval of time. I must improve by defered check, queue object and check some of object in list. Spread computation to several frames.
+  + Maybe many more bugs that I not found it right now because limit time to test. But on real working must do test much much more.
